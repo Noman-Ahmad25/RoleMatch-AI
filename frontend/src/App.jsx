@@ -22,13 +22,13 @@ function App() {
 
     try {
       // Connect to your local Python Server
-      const response = await axios.post('http://127.0.0.1:5000/predict', {
+      const response = await axios.post('https://rolematch-ai.onrender.com/predict', {
         resume: resume
       })
       
       setResult(response.data)
     } catch (err) {
-      setError("Failed to connect to AI Server. Is python app.py running?")
+      setError("Failed to connect to AI server. Please try again later.")
       console.error(err)
     } finally {
       setLoading(false)
