@@ -56,14 +56,14 @@ if __name__ == "__main__":
     if model:
         print("\n--- AI Resume Classifier Ready ---")
         
-        while True:
-            user_input = input("\nPaste resume text (or type 'exit'): ")
-            if user_input.lower() == 'exit':
-                break
+      #  while True:
+         #   user_input = input("\nPaste resume text (or type 'exit'): ")
+           # if user_input.lower() == 'exit':
+          #      break
             
-            vec = vectorizer.transform([user_input])
-            pred = model.predict(vec)[0]
-            proba = model.predict_proba(vec).max() * 100
+          #  vec = vectorizer.transform([user_input])
+           # pred = model.predict(vec)[0]
+           # proba = model.predict_proba(vec).max() * 100
 
-            print(f"🎯 Role: {pred}")
-            print(f"📊 Confidence: {proba:.2f}%")
+           # print(f"🎯 Role: {pred}")
+        # print(f"📊 Confidence: {proba:.2f}%")
